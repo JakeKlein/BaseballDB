@@ -1,0 +1,9 @@
+{
+    "path" : "~/Baseball/baseballDB",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

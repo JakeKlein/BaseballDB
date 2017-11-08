@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "loader<-function(package){\n  tryCatch(\n    {\n    if(suppressWarnings(!require(package,character.only = TRUE,quietly = TRUE))){\n      print(paste(package,\"not installed\",sep=\" \"));\n      print(paste(\"Will install:\",package,sep=\" \"));\n      install.packages(package,quiet=TRUE);\n      require(package,character.only=TRUE)\n    }\n    else{\n      require(package,character.only=TRUE,quietly = TRUE)\n    }\n  },\n  error=function(cond){\n    message('Must input package name in quotation marks {\"\"}')\n  }\n  )\n}\n\n  ",
+    "created" : 1510069723211.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4071238034",
+    "id" : "AA978202",
+    "lastKnownWriteTime" : 1510067356,
+    "last_content_update" : 1510067356,
+    "path" : "~/Baseball/baseballDB/R/loader.R",
+    "project_path" : "R/loader.R",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

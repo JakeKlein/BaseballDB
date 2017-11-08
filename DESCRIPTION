@@ -1,0 +1,12 @@
+Package: baseballDB
+Type: Package
+Title: Functions for acquiring and storing baseball data
+Version: 0.1.0
+Author: Jake Klein <jakeklein94@gmail.com>
+Maintainer: Jake Klein <jakeklein94@gmail.com>
+Description: Provides multiple functions for acquiring baseball data towards the purpose of 
+    constructing and maintaining a baseball analytics database.  This package builds off of the
+    work of Bill Petti.
+License: None yet.
+Encoding: UTF-8
+LazyData: true
