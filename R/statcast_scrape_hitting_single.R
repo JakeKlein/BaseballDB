@@ -11,7 +11,7 @@
 #' \dontrun{
 #' scrape_statcast_savant_batter_all(start_date = "2016-04-06", end_date = "2016-04-15")
 #' }
-
+loader("dplyr");loader("data.table")
 scrape_statcast_savant_batter_all <- function(start_date, end_date) {
   # Check to make sure args are in the correct format.
   if(!is.character(start_date) | !is.character(end_date)) {
@@ -46,7 +46,7 @@ scrape_statcast_savant_batter_all <- function(start_date, end_date) {
     {
       print("These data are from BaseballSevant and are property of MLB Advanced Media, L.P. All rights reserved.")
       print("Grabbing data, this may take a minute...")
-      payload <- utils::read.csv(url)
+      payload <- data.table::fread(url)
       
     },
     error=function(cond) {
