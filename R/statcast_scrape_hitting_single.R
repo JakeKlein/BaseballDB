@@ -33,21 +33,21 @@ scrape_statcast_savant_batter_all <- function(start_date, end_date) {
     stop("The start date is later than the end date.")
     return(NULL)
   }
-  
+
   # extract season from start_date
-  
+
   year <- substr(start_date, 1,4)
-  
+
   # Base URL.
   url <- paste0("https://baseballsavant.mlb.com/statcast_search/csv?all=true&hfPT=&hfAB=&hfBBT=&hfPR=&hfZ=&stadium=&hfBBL=&hfNewZones=&hfGT=R%7CPO%7CS%7C&hfC=&hfSea=", year, "%7C&hfSit=&player_type=batter&hfOuts=&opponent=&pitcher_throws=&batter_stands=&hfSA=&game_date_gt=",start_date,"&game_date_lt=",end_date,"&team=&position=&hfRO=&home_road=&hfFlag=&metric_1=&hfInn=&min_pitches=0&min_results=0&group_by=name&sort_col=pitches&player_event_sort=h_launch_speed&sort_order=desc&min_abs=0&type=details&")
-  
+
   # Do a try/catch to show errors that the user may encounter while downloading.
   tryCatch(
     {
       print("These data are from BaseballSevant and are property of MLB Advanced Media, L.P. All rights reserved.")
       print("Grabbing data, this may take a minute...")
       payload <- data.table::fread(url)
-      
+
     },
     error=function(cond) {
       message(paste("URL does not seem to exist, please check your Internet connection:"))
@@ -90,7 +90,7 @@ scrape_statcast_savant_batter_all <- function(start_date, end_date) {
   payload$hc_y<-as.character(payload$hc_y) %>% as.numeric()
   payload$barrel <- with(payload, ifelse(launch_angle <= 50 & launch_speed >= 98 & launch_speed * 1.5 - launch_angle >= 11 & launch_speed + launch_angle >= 124, 1, 0))
   message("URL read and payload acquired successfully.")
-  
+
   return(payload)
-  
+
 }

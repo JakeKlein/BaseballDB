@@ -12,7 +12,7 @@
 #' scrape_statcast_savant_pitcher(start_date = "2016-04-06",
 #' end_date = "2016-04-15", pitcherid = 592789)
 #' }
-loader("dpylr");loader("data.table")
+loader("dplyr");loader("data.table")
 statcast_scrape_pitching_single <- function(start_date, end_date) {
   # Check to make sure args are in the correct format.
   if(!is.character(start_date) | !is.character(end_date)) {
