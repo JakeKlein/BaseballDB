@@ -2,9 +2,9 @@ pitchfx_teams=c("chamlb","miamlb","wasmlb","anamlb","detmlb","nyamlb","tbamlb","
                 "seamlb","colmlb","sdnmlb","atlmlb","balmlb","clemlb","texmlb","chnmlb","minmlb","houmlb","slnmlb",
                 "bosmlb","lanmlb","nynmlb","tormlb","sfnmlb","pitmlb")
 
-statcast_teams=c("CWS","MIA","WSH","LAA","DET","NYM","TB","PHI","CIN","KC","OAK","MIL","ARI",
+statcast_teams=c("CWS","MIA","WSH","LAA","DET","NYY","TB","PHI","CIN","KC","OAK","MIL","ARI",
                 "SEA","COL","SD","ATL","BAL","CLE","TEX","CHC","MIN","HOU","STL",
-                "BOS","LAD","NYY","TOR","SF","PIT")
+                "BOS","LAD","NYM","TOR","SF","PIT")
 
 replace_team_names<-function(name,verbose=FALSE){
   index=match(name,pitchfx_teams);
