@@ -5,4 +5,6 @@
 ~%2FBaseball%2FbaseballDB%2FR%2Fstatcast_pitch_scrape.R="7140101A"
 ~%2FBaseball%2FbaseballDB%2FR%2Fstatcast_scrape_hitting_single.R="2196F357"
 ~%2FBaseball%2FbaseballDB%2FR%2Fstatcast_scrape_pitching_single.R="AC2A1382"
+~%2FBaseball%2FbaseballDB%2FR%2FweatherFinder.R="A40016BE"
 ~%2FMLB.R="DDD97701"
+~%2Freplace_team_names.R="BFCEC67A"
