@@ -9,8 +9,7 @@ weatherFinder = function(station, gamedate){
     '&year2=', year(gamedate),
     '&month2=', month(gamedate),
     '&day2=', mday(gamedate),
-    '&tz=', paste0(tstrsplit(tz,'/')[1],"%2F",tstrsplit(tz,'/')[2]),
-    '&format=onlycomma&latlon=no&direct=no&report_type=1&report_type=2');
+    '&tz=Etc%2FUTC&format=onlycomma&latlon=no&direct=no&report_type=1&report_type=2');
   vars = c('station', 'valid', 'tmpf', 'relh', 'alti');
   colnames = c('station', 'time', 'tempf', 'humidity', 'pressure');
   data = fread(url, sep = ",", header = TRUE,verbose=FALSE)[tmpf!='M'][,..vars];
