@@ -14,6 +14,8 @@ weatherFinder = function(station, gamedate){
   colnames = c('station', 'time', 'tempf', 'humidity', 'pressure');
   data = fread(url, sep = ",", header = TRUE,verbose=FALSE,showProgress = FALSE)[tmpf!='M'][,..vars];
   colnames(data) = colnames;
+  data$tempf=as.numeric(data$tempf)
+
   return(data[,time_dif:=abs(as.POSIXct(time)-gamedate)][which.min(time_dif)])
 }
 

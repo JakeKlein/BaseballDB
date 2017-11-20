@@ -47,7 +47,7 @@ statcast_scrape_pitching_single <- function(start_date, end_date) {
     {
       print("These data are from BaseballSevant and are property of MLB Advanced Media, L.P. All rights reserved.")
       print("Grabbing data, this may take a minute...")
-      payload <- data.table::fread(url)
+      payload <- data.table::fread(url,showProgress = FALSE,verbose=FALSE)
 
     },
     error=function(cond) {

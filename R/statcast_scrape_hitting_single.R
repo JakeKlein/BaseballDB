@@ -46,7 +46,7 @@ scrape_statcast_savant_batter_all <- function(start_date, end_date) {
     {
       print("These data are from BaseballSevant and are property of MLB Advanced Media, L.P. All rights reserved.")
       print("Grabbing data, this may take a minute...")
-      payload <- data.table::fread(url)
+      payload <- data.table::fread(url,verbose=FALSE,showProgress = FALSE)
 
     },
     error=function(cond) {
